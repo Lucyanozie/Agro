@@ -13,7 +13,7 @@ Then open http://localhost:5173.
 | Script | What it does |
 | --- | --- |
 | `npm run dev` | Vite dev server with HMR |
-| `npm run build` | Type-check (`tsc -b`) then production build |
+| `npm run build` | Production build (`vite build`) |
 | `npm run preview` | Serve the production build locally |
 | `npm run lint` | ESLint over `src/` |
 
@@ -68,14 +68,14 @@ reload.
 src/
 ├── components/   layout shell, UI primitives, marketplace/cart/order/chat/farmer pieces
 ├── context/      Auth, Product, Cart, Order, Chat, Verification, Toast providers
-├── data/seed.ts  catalog, people, orders, conversations, harvests
+├── data/seed.js  catalog, people, orders, conversations, harvests
 ├── lib/          types, formatting helpers, localStorage wrapper
 └── pages/        auth, farmer (+ verification), buyer, shared
 ```
 
 ### Swapping in a backend
 
-Every provider reads and writes through [`src/lib/storage.ts`](src/lib/storage.ts) and
+Every provider reads and writes through [`src/lib/storage.js`](src/lib/storage.ts) and
 seeds from [`src/data/seed.ts`](src/data/seed.ts). Point those two at an API client and
 the component tree is unchanged.
 
