@@ -6,7 +6,7 @@ const MONTHS = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December',
 ];
-/** Monday-first grid with harvest days marked green and today marked blue. */
+
 export function HarvestCalendar({ harvestDates, initialMonth, }) {
     const [cursor, setCursor] = useState(() => initialMonth ?? new Date());
     const harvestDays = useMemo(() => {
@@ -19,7 +19,7 @@ export function HarvestCalendar({ harvestDates, initialMonth, }) {
         const year = cursor.getFullYear();
         const month = cursor.getMonth();
         const first = new Date(year, month, 1);
-        // getDay() is Sunday-first; shift so Monday starts the week.
+        
         const lead = (first.getDay() + 6) % 7;
         const days = new Date(year, month + 1, 0).getDate();
         return [

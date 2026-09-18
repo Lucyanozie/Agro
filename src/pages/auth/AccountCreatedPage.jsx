@@ -15,7 +15,7 @@ export function AccountCreatedPage() {
     return (<SuccessScreen title="Congratulations!" description={<>
           <p>Your account has been successfully created.</p>
           <p className="mt-4">
-            You can now start sellimg or buying agricultural products.
+            You can now start selling or buying agricultural products.
           </p>
         </>} actions={<div className="space-y-3">
           <Button block onClick={continueOn}>

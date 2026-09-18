@@ -53,3 +53,23 @@
 .recharts-text {
   font-family: inherit;
 }
+
+.phone-input {
+  @apply flex w-full items-center rounded-full border border-ink-line bg-white px-4 py-3 text-[15px] text-ink transition;
+}
+
+.phone-input:focus-within {
+  @apply border-brand-500 ring-2 ring-brand-100;
+}
+
+.phone-input-error {
+  @apply border-red-300;
+}
+
+.phone-input .PhoneInputCountry {
+  @apply mr-2 shrink-0;
+}
+
+.phone-input .PhoneInputInput {
+  @apply min-w-0 flex-1 border-0 bg-transparent p-0 text-[15px] text-ink outline-none;
+}
